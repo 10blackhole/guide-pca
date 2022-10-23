@@ -1,4 +1,4 @@
-# PCA
+# Pricipal Component Analysis (PCA)
 ## Links:
 - [Guide To Image Reconstruction Using Principal Component Analysis](https://analyticsindiamag.com/guide-to-image-reconstruction-using-principal-component-analysis/)
 
@@ -140,6 +140,56 @@ Using PCA for Image Reconstruction, we can also segregate between the amounts of
 	plt.show()
 
 A particular image channel can also be converted into a data frame for further processing,
- 
+
+	import numpy as np
+	import pandas as pd
+
+**Creating dataframe from blue presence in image**
+
+	blue_chnl_df = pd.DataFrame(data=blue)
+	blue_chnl_df
+
+The data fot each color presence can also be fit and transformed to a particular number of components for checking the variance of each color presence,
+
+**Scaling data between 0 to 1**
+	
+	df_blue = blue/255
+	df_green = green/255
+	df_red = red/255
+
+**Setting a reduced number of components**
+
+	pca_b = PCA(n_components=50)
+	pca_b.fit(df_blue)
+	trans_pca_b = pca_b.transform(df_blue)
+	pca_g = PCA(n_components=50)
+	pca_g.fit(df_green)
+	trans_pca_g = pca_g.transform(df_green)
+	pca_r = PCA(n_components=50)
+	pca_r.fit(df_red)
+	trans_pca_r = pca_r.transform(df_red)
+
+**Transforming shape**
+	
+	print(trans_pca_b.shape)
+	print(trans_pca_r.shape)
+	print(trans_pca_g.shape)
+
+**Checking variance after reduced components**
+
+	print(f"Blue Channel : {sum(pca_b.explained_variance_ratio_)}")
+	print(f"Green Channel: {sum(pca_g.explained_variance_ratio_)}")
+	print(f"Red Channel  : {sum(pca_r.explained_variance_ratio_)}")
+
+Output(example):
+
+	Blue Channel : 0.9835704508744926
+	Green Channel: 0.9794100254497594
+	Red Channel  : 0.9763416610407115
+
+We can observe tahy by using 50 components we can keep around 98% of the variance in the data!
+
+
+
 - [Principal Component Analysis (PCA) applied to images (pdf)](http://people.ciirc.cvut.cz/~hlavac/TeachPresEn/11ImageProc/15PCA.pdf)
 - [How to reverse PCA and reconstruct original variables from several principal components?](https://stats.stackexchange.com/questions/229092/how-to-reverse-pca-and-reconstruct-original-variables-from-several-principal-com)
