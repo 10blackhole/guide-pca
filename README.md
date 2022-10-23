@@ -30,11 +30,11 @@ Here we sill using imread from matplotlib to import the image as a matrix
 	plt.figure(figsize=[12,8])
 	plt.imshow(my_image)
 
-The image being processed is a coloured image and hance has data in 3 channels-Red, Green, Blue. Therefore the sape of the data -525x700x3
+The image being processed is a coloured image and hance has data in 3 channels-Red, Green, Blue. Therefore the shape of the data (shape of data)
 
 **Processing the image**
 
-Let us now start with our image processing. Here first, we will be grayscaling our image, and then we'll perfomr PCA on the matrix with all the components. We will also create and look at the scree plot to assess how many components we could retain and how much cumulative variance they capture.
+Let us now start with our image processing. Here first, we will be grayscaling our image, and then we'll perform PCA on the matrix with all the components. We will also create and look at the scree plot to assess how many components we could retain and how much cumulative variance they capture.
 
 **Greyscaling the image**
 
@@ -71,7 +71,7 @@ Let us now start with our image processing. Here first, we will be grayscaling o
 	plt.axhline(y=95, color="r", linestyle="--")
 	ax = plt.plot(var_cumu)
 
-Now let's reconstruct the image using only 23 components and see if our reconstructed image comes out to be visually different from the original image
+Now let's reconstruct the image using only (#) components and see if our reconstructed image comes out to be visually different from the original image
 
 **Reconstructing using Inverse Transform**
 
