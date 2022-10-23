@@ -117,8 +117,29 @@ Plotting the same for different numbers of components to compare the exact relat
 Using PCA for Image Reconstruction, we can also segregate between the amounts of RGB present in an image,
 
 	import cv2
-	img = cv2.cvtColor(cv2.imread('flor.jpeg'))
+	img = cv2.cvtColor(cv2.imread('/path/.image'), cv2.COLOR_BGR2RGB)
+	plt.imshow(img)
+	plt.show()
 
+**Splittin into channels**
 
+	blue, green, red = cv2.split(img)
+
+**Plotting the images**
+
+	fig = plt.figure(figsize=(15,7.2))
+	fig.add_subplot(131)
+	plt.title("Blue Presence")
+	plt.imshow(blue)
+	fig.add_subplot(132)
+	plt.title("Green Presence")
+	plt.imshow(green)
+	fig.add_subplot(133)
+	plt.title("Red Presence")
+	plt.imshow(red)
+	plt.show()
+
+A particular image channel can also be converted into a data frame for further processing,
+ 
 - [Principal Component Analysis (PCA) applied to images (pdf)](http://people.ciirc.cvut.cz/~hlavac/TeachPresEn/11ImageProc/15PCA.pdf)
 - [How to reverse PCA and reconstruct original variables from several principal components?](https://stats.stackexchange.com/questions/229092/how-to-reverse-pca-and-reconstruct-original-variables-from-several-principal-com)
