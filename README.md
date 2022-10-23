@@ -238,3 +238,5 @@ PCA objetive is to rotate rigidly the coordinate axes of the $p$-dimensional lin
 
 *********************
 # [How to reverse PCA and reconstruct original variables from several principal components?](https://stats.stackexchange.com/questions/229092/how-to-reverse-pca-and-reconstruct-original-variables-from-several-principal-com)
+
+# [PCA Visualization  in Julia](https://plotly.com/julia/pca-visualization/#highdimensional-pca-analysis-with--plotdataframe-kindsplom)
