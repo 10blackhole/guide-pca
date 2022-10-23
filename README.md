@@ -1,6 +1,6 @@
 # Pricipal Component Analysis (PCA)
-# Links:
-##  [Guide To Image Reconstruction Using Principal Component Analysis](https://analyticsindiamag.com/guide-to-image-reconstruction-using-principal-component-analysis/)
+<!--# Links:-->
+#  [Guide To Image Reconstruction Using Principal Component Analysis](https://analyticsindiamag.com/guide-to-image-reconstruction-using-principal-component-analysis/)
 
 Principal Component Analysis belongs to a class of linear transforms bases on statistical techniques. This method provides a powerful toll for data analysis and pattern recognition, which is often preferred in signal an imagage processing as a technique of data compression, data dimension reduction, or decorrelation. PCA is an unsipervides learning method similar to clustering. It finds patterns without prior knowledge about whether the samples come from different treatment groups or essential differences. The objective is pursued by analysing principal components where we can perceive relationships that would otherwise remain hidden in higher dimensions.
 The representation processed must be such that the loss of information must be minimal after discarding the higher dimensions.
@@ -199,7 +199,7 @@ We can observe that by using 50 components we can keep around 98% of the varianc
 
 **************
 
-## [Principal Component Analysis (PCA) applied to images (pdf)](http://people.ciirc.cvut.cz/~hlavac/TeachPresEn/11ImageProc/15PCA.pdf)
+# [Principal Component Analysis (PCA) applied to images (pdf)](http://people.ciirc.cvut.cz/~hlavac/TeachPresEn/11ImageProc/15PCA.pdf)
 
 
 **PCA, the instance of the eigen-analysis**
@@ -210,7 +210,7 @@ PCA objetive is to rotate rigidly the coordinate axes of the $p$-dimensional lin
 + Coordinate axes are ordered sush that principal axis 1 corresponds to the highest variance in data, axis 2 has the next highest variance,..., and axis $p$ has the lowest variance.
 + The covariance among each pair of principal exes is zero, i.e, they are uncorralated.
 
-### Geometric motivation, principal components
+## Geometric motivation, principal components
 - Two- dimensional vector space of observations, $(x_1, x_2)$
 - Each observation corresponds to a single point in the vector space.
 - *The goal*: Find another basis of the vector space, which treats variations of fata better.
@@ -220,10 +220,21 @@ PCA objetive is to rotate rigidly the coordinate axes of the $p$-dimensional lin
 - The second principal direction (component, basis vector) $z_2$ is a direction perpendicular to $z_1$ and minimizing the distances to data points to a correspinding straight line.
 - For higher dimensional observation spces, this construction is repeated.
 
+##Principal component analysis, introduction
+- PCA is a powerful and widely used linear technique in statics, signal processing, image processing, and elsewhere.
+- In statistics, PCA is a method for simplifyng a multidimensional dataset to lower dimesions for analysis, visualization or data compression.
+- PCA represents the data in a new coordiante system in which **basis vectors follow modes of greatest variance in the data**.
+- Thus, new **basis ectros are calculated for the particular data set**.
+- The price to be pains for PCA's flecibility is in higher computational requirements as comapered to, e.g. ,the fats Fourier transform.
+
+## Derivation, $M$-dimensional case
+- Suppose a **data set** comprising $N$ observations, each of $M$ variables (dimensions). Usually $N\gg M$.
+- **The aim: to reduce the dimensionality** of the data so that each observation can be usefully represented with only $L$ variables, $1\leq L\leq M$.
+- Data are arranged as a set of $N$ column data vectors, each representing a single observation of $M$ variables: the $n$-th observations is a column vector $\vb{x}$
 
 
 
 
 
-
-- [How to reverse PCA and reconstruct original variables from several principal components?](https://stats.stackexchange.com/questions/229092/how-to-reverse-pca-and-reconstruct-original-variables-from-several-principal-com)
+*********************
+# [How to reverse PCA and reconstruct original variables from several principal components?](https://stats.stackexchange.com/questions/229092/how-to-reverse-pca-and-reconstruct-original-variables-from-several-principal-com)
