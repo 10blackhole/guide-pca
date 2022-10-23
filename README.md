@@ -34,7 +34,7 @@ The image being processed is a coloured image and hance has data in 3 channels-R
 
 **Processing the image**
 
-Let us now start with our image processing. Here first, we will be grayscaling our image, and then we'll perform PCA on the matrix with all the components. We will also create and look at the scree plot to assess how many components we could retain and how much cumulative variance they capture.
+Let us now start with our image processing. Here first, we will be grayscaling our image, and then we'll perform PCA on the matrix with all the components. We will also create and look at the scree plot (In multivariate statistics, a scree plot is a line plot of the eigenvalues of factors or principal components in an analysis) to assess how many components we could retain and how much cumulative variance they capture.
 
 **Greyscaling the image**
 
@@ -187,7 +187,7 @@ Output(example):
 	Green Channel: 0.9794100254497594
 	Red Channel  : 0.9763416610407115
 
-We can observe tahy by using 50 components we can keep around 98% of the variance in the data!
+We can observe that by using 50 components we can keep around 98% of the variance in the data!
 
 
 
