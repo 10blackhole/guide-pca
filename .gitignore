@@ -1,1 +1,6 @@
 pdfs
+*.jl
+Untitled1.ipynb
+Structure.ipynb
+.ipynb_checkpoints/
+__pycache__/
